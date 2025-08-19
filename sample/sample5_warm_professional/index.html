@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勝田商店 - 心温まる新鮮魚介の専門店</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ナビゲーション -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../../shared/images/logo.jpg" alt="勝田商店ロゴ" style="height: 50px; border-radius: 8px;">
+                <div>
+                    <span class="logo-main">勝田商店</span>
+                    <span class="logo-sub">心温まる海の恵み</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">ホーム</a></li>
+                <li><a href="#about" class="nav-link">私たちの想い</a></li>
+                <li><a href="#gallery" class="nav-link">写真ギャラリー</a></li>
+                <li><a href="#contact" class="nav-link">お気軽にご相談</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 動画ヒーローセクション -->
+    <section class="hero-video" id="home">
+        <div class="video-container">
+            <video autoplay muted loop playsinline class="hero-bg-video">
+                <source src="videos/seafood-hero.mp4" type="video/mp4">
+                <!-- フォールバック用の背景画像 -->
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line-1">心を込めて</span>
+                    <span class="title-line-2">最高の魚を</span>
+                    <span class="title-line-3">プロの皆様へ</span>
+                </h1>
+                <p class="hero-subtitle">
+                    創業50年、家族のような温かさでプロの料理人に寄り添い続けています。<br>
+                    毎朝15kmの市場歩きから生まれる、信頼と笑顔の関係を大切にしています。
+                </p>
+                <div class="hero-buttons">
+                    <a href="#gallery" class="btn-primary">写真で見る日常</a>
+                    <a href="#contact" class="btn-secondary">お気軽にお話を</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- スクロールインジケーター -->
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">下へ</span>
+        </div>
+    </section>
+
+    <!-- 私たちの想いセクション -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-header">
+                        <span class="section-number">01</span>
+                        <h2 class="section-title">家族のような温かさで</h2>
+                    </div>
+                    <div class="about-text">
+                        <p class="lead-text">1974年の創業以来、勝田商店は「家族のような温かさ」を大切に、プロの料理人の皆様と歩んできました。</p>
+                        <p>高級レストランから街の定食屋さんまで、すべてのお客様を家族のように思い、一人ひとりの想いに寄り添いながら、最高の魚をお届けしています。技術だけでなく、心のこもったサービスで信頼をいただいています。</p>
+                        
+                        <!-- 店主の思い - 温かみのあるスタイル -->
+                        <div class="owner-message">
+                            <h4 class="message-title">店主の心からの想い</h4>
+                            <div class="message-content">
+                                <p class="message-text">「毎朝15km市場を歩いて魚を選びます。妥協はしません。プロの寿司屋も買っていく魚を、自分の目と足で見極めています。</p>
+                                <p class="message-text">でも、店に戻ってきてお客さんと魚の話をする時間が、やっぱりいちばん楽しい。『これどうやって食べる？』『今日のおすすめは？』</p>
+                                <p class="message-text">そんな会話が、うちの魚屋をあたためてくれます。皆様の笑顔が、私たちの一番の宝物です。」</p>
+                                <div class="message-signature">
+                                    <span class="signature-name">勝田商店 店主</span>
+                                    <span class="signature-title">勝田 太郎</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <span class="stat-number">15km</span>
+                                <span class="stat-label">毎日の愛情歩行</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">年の温かい歴史</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">家族のようなお客様</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">∞</span>
+                                <span class="stat-label">笑顔と感謝の気持ち</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="../../shared/images/family.jpg" alt="勝田商店の温かい家族的な雰囲気" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フォトギャラリーセクション -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">日々の温かな<br>瞬間たち</h2>
+                <p class="section-subtitle">職人の技と、お客様との温かい交流の日常風景</p>
+            </div>
+            
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="../../shared/images/shop.jpg" alt="店内の様子" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>店内の温かい雰囲気</h4>
+                        <p>お客様をお迎えする心地よい空間</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="../../shared/images/maguro.jpg" alt="新鮮なマグロ" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>新鮮な本マグロ</h4>
+                        <p>最高品質のマグロを丁寧に処理</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="../../shared/images/kani.jpg" alt="新鮮なカニ" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>活きカニ</h4>
+                        <p>新鮮な海の味覚をお楽しみください</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="../../shared/images/kanbann.jpg" alt="勝田商店の看板" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>勝田商店の看板</h4>
+                        <p>50年の歴史を刻む看板</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="../../shared/images/logo.jpg" alt="勝田商店ロゴ" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>勝田商店のロゴ</h4>
+                        <p>伝統と信頼の象徴</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="../../shared/images/family.jpg" alt="家族写真" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>笑顔の集い</h4>
+                        <p>家族のような温かい関係</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お客様の声セクション -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-number">03</span>
+                <h2 class="section-title">家族のような<br>お客様の声</h2>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-item active">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">勝田さんのお人柄と魚への愛情が、いつも私たちの料理に温かさを加えてくれます。技術だけでなく、心のこもったサービスが本当にありがたいです。</p>
+                        <div class="testimonial-author">
+                            <h4>田中シェフ</h4>
+                            <p>銀座 和食レストラン「心」 オーナーシェフ</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">魚のことなら何でも教えてくれて、家族の食事に最適な魚を選んでくれます。料理法まで丁寧に教えてくださり、いつも助かっています。</p>
+                        <div class="testimonial-author">
+                            <h4>田中様</h4>
+                            <p>中野区在住 主婦</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- コンタクトセクション -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <span class="section-number">04</span>
+                        <h2 class="section-title">お気軽に<br>ご相談ください</h2>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h4>🏪 勝田商店</h4>
+                            <p>中野ブロードウェイ店<br>
+                            プロの料理人からご家庭の皆様まで、心よりお待ちしております</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h4>📍 お店の場所</h4>
+                            <p>東京都中野区中野5-52-15<br>中野ブロードウェイ B1F<br>
+                            <small>駅から徒歩5分、アクセス良好です</small></p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h4>⏰ 営業時間</h4>
+                            <p>平日：朝 5:00 〜 夕方 6:00<br>土曜：朝 5:00 〜 午後 4:00<br>定休日：日曜・祝日<br>
+                            <small>※ 早朝のご相談も承ります</small></p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h4>📞 お問い合わせ</h4>
+                            <p>TEL: 03-1234-5678<br>FAX: 03-1234-5679<br>EMAIL: kokoro@katsuta-shoten.jp<br>
+                            <small>魚の選び方や調理法もお気軽にご相談ください</small></p>
+                        </div>
+                        
+                        <div class="social-links-pro">
+                            <a href="https://www.instagram.com/katsuta2011/" target="_blank" class="social-link">
+                                <span class="social-icon">📷</span>
+                                <span>Instagram で日常をご覧ください</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.794539178783!2d139.6635158152595!3d35.7091705801884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f297492837e3%3A0x4fd170686225f77b!2z5Yud55Sw5ZWG5bqX5Lit6YeO44OW44Ot44O844OJ44O844Km5bqX!5e0!3m2!1sja!2sjp!4v1664944512345!5m2!1sja!2sjp" 
+                    width="100%" 
+                    height="500" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-main">勝田商店</span>
+                    <span class="logo-sub">心温まる海の恵み</span>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2024 勝田商店. プロからご家庭まで、心を込めて皆様にお届けします.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

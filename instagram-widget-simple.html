@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Widget Test</title>
+    <style>
+        .instagram-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .widget-option {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instagram-container">
+        <h1>Instagram埋め込みテスト</h1>
+        
+        <!-- オプション1: LightWidget -->
+        <div class="widget-option">
+            <h3>1. LightWidget (無料)</h3>
+            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+            <iframe src="//lightwidget.com/widgets/f4c5b84db1a7c4e8f3a2b5c9e6d7f1a8.html" 
+                    scrolling="no" 
+                    allowtransparency="true" 
+                    class="lightwidget-widget" 
+                    style="width:100%;border:0;overflow:hidden;">
+            </iframe>
+        </div>
+        
+        <!-- オプション2: SnapWidget -->
+        <div class="widget-option">
+            <h3>2. SnapWidget (無料)</h3>
+            <iframe src="https://snapwidget.com/embed/1234567" 
+                    class="snapwidget-widget" 
+                    allowtransparency="true" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    style="border:none; overflow:hidden; width:100%; height:400px;">
+            </iframe>
+        </div>
+        
+        <!-- オプション3: 手動Instagram埋め込み -->
+        <div class="widget-option">
+            <h3>3. 手動Instagram埋め込み</h3>
+            <div style="display: flex; justify-content: center;">
+                <blockquote class="instagram-media" 
+                           data-instgrm-permalink="https://www.instagram.com/katsuta2011/" 
+                           data-instgrm-version="14"
+                           style="max-width:540px; min-width:326px; width:100%;">
+                </blockquote>
+            </div>
+        </div>
+        
+        <!-- オプション4: 簡単な解決策 -->
+        <div class="widget-option">
+            <h3>4. 直接リンク（推奨）</h3>
+            <div style="text-align: center; padding: 40px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 15px;">
+                <h4 style="color: white; margin-bottom: 20px;">📸 最新の魚情報</h4>
+                <a href="https://www.instagram.com/katsuta2011/" 
+                   target="_blank" 
+                   style="display: inline-block; padding: 15px 30px; background: white; color: #f5576c; text-decoration: none; border-radius: 25px; font-weight: bold; transition: transform 0.3s;">
+                    @katsuta2011 をフォロー
+                </a>
+                <p style="color: white; margin-top: 15px; font-size: 14px;">
+                    Instagramで毎日の新鮮な魚情報をお届けしています
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script async src="//www.instagram.com/embed.js"></script>
+</body>
+</html>

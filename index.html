@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勝田商店 - サンプルサイト集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 50px;
+            font-size: 1.2rem;
+        }
+        
+        .samples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .sample-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .sample-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .sample-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+        
+        .sample-description {
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .sample-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .sample-features li {
+            color: #4a5568;
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .sample-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .samples-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sample-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>勝田商店</h1>
+        <p class="subtitle">魚屋ホームページ - デザインサンプル集</p>
+        
+        <div class="samples-grid">
+            <a href="sample/sample1_traditional/index.html" class="sample-card">
+                <h3 class="sample-title">サンプル1: 伝統的な和風デザイン</h3>
+                <p class="sample-description">落ち着いた色合いと和の要素を取り入れた、伝統的な魚屋の雰囲気を表現したデザイン</p>
+                <ul class="sample-features">
+                    <li>和風カラーパレット</li>
+                    <li>シンプルで読みやすいレイアウト</li>
+                    <li>Instagram連携</li>
+                </ul>
+                <span class="btn">サンプルを見る</span>
+            </a>
+            
+            <a href="sample/sample2_modern/index.html" class="sample-card">
+                <h3 class="sample-title">サンプル2: モダンでクリーンなデザイン</h3>
+                <p class="sample-description">現代的でスタイリッシュな印象を与える、若い世代にもアピールするデザイン</p>
+                <ul class="sample-features">
+                    <li>モダンなタイポグラフィ</li>
+                    <li>クリーンなレイアウト</li>
+                    <li>レスポンシブ対応</li>
+                </ul>
+                <span class="btn">サンプルを見る</span>
+            </a>
+            
+            <a href="sample/sample3_ocean/index.html" class="sample-card">
+                <h3 class="sample-title">サンプル3: 海をテーマにした爽やかなデザイン</h3>
+                <p class="sample-description">海の爽やかさと新鮮さを表現した、ブルー系を基調とした明るいデザイン</p>
+                <ul class="sample-features">
+                    <li>海をイメージした配色</li>
+                    <li>爽やかな印象</li>
+                    <li>写真ギャラリー機能</li>
+                </ul>
+                <span class="btn">サンプルを見る</span>
+            </a>
+            
+            <a href="sample/sample4_professional/index.html" class="sample-card">
+                <h3 class="sample-title">サンプル4: プロ向け高級デザイン</h3>
+                <p class="sample-description">プロの料理人向けの高級感あふれるブラックを基調としたデザイン</p>
+                <ul class="sample-features">
+                    <li>高級感のあるブラック基調</li>
+                    <li>動画ヒーローセクション</li>
+                    <li>プロ向けの洗練されたUI</li>
+                </ul>
+                <span class="btn">サンプルを見る</span>
+            </a>
+            
+            <a href="sample/sample4_professional_jp/index.html" class="sample-card">
+                <h3 class="sample-title">サンプル4 日本語版: プロ向け高級デザイン</h3>
+                <p class="sample-description">サンプル4の完全日本語版。プロの料理人向けの高級感あふれるデザイン</p>
+                <ul class="sample-features">
+                    <li>完全日本語対応</li>
+                    <li>高級感のあるデザイン</li>
+                    <li>プロ向けコンテンツ</li>
+                </ul>
+                <span class="btn">サンプルを見る</span>
+            </a>
+            
+            <a href="sample/sample5_warm_professional/index.html" class="sample-card">
+                <h3 class="sample-title">サンプル5: 温かみのあるプロフェッショナル</h3>
+                <p class="sample-description">プロフェッショナルな品質と家族的な温かさを両立させたデザイン</p>
+                <ul class="sample-features">
+                    <li>ゴールド系の温かみのある配色</li>
+                    <li>家族的な親しみやすさ</li>
+                    <li>15km市場歩きのストーリー</li>
+                </ul>
+                <span class="btn">サンプルを見る</span>
+            </a>
+            
+            <a href="sample/sample6_blue_ocean/index.html" class="sample-card">
+                <h3 class="sample-title">サンプル6: 青い海テーマ（動画背景）</h3>
+                <p class="sample-description">新鮮な魚にこだわる想いを青い海のテーマで表現した、動画背景付きデザイン</p>
+                <ul class="sample-features">
+                    <li>動画背景によるインパクト</li>
+                    <li>新鮮さを強調したコンテンツ</li>
+                    <li>15km市場歩きの努力を強調</li>
+                </ul>
+                <span class="btn">サンプルを見る</span>
+            </a>
+            
+            <a href="sample/sample7_sakanabacca_style/index.html" class="sample-card">
+                <h3 class="sample-title">サンプル7: sakanabaccaスタイル</h3>
+                <p class="sample-description">sakanabacca.jpを参考にしたモダンでクリーンな日本の魚文化を表現したデザイン</p>
+                <ul class="sample-features">
+                    <li>ミニマルで洗練されたヘッダー</li>
+                    <li>ストーリーテリング重視のレイアウト</li>
+                    <li>美しい画像中心のギャラリー</li>
+                </ul>
+                <span class="btn">サンプルを見る</span>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 勝田商店 ホームページサンプル集</p>
+        </div>
+    </div>
+</body>
+</html>
