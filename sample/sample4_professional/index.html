@@ -33,14 +33,11 @@
 
     <!-- 動画ヒーローセクション -->
     <section class="hero-video" id="home">
-        <div class="video-container">
-            <video autoplay muted loop playsinline class="hero-bg-video">
-                <source src="videos/seafood-hero.mp4" type="video/mp4">
-                <!-- フォールバック用の背景画像 -->
-            </video>
-            <div class="video-overlay"></div>
+        <div class="hero__media">
+            <video id="hero-video" class="video-div" src="../../shared/videos/demo.mp4" data-type="mp4" loop muted playsinline autoplay></video>
         </div>
         
+        <div class="hero__text-wrap">
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">
@@ -56,6 +53,7 @@
                     <a href="#contact" class="btn-secondary">GET IN TOUCH</a>
                 </div>
             </div>
+        </div>
         </div>
         
         <!-- スクロールインジケーター -->

@@ -1,7 +1,35 @@
 // Professional Website JavaScript
 class ProfessionalSite {
     constructor() {
+        this.initVideo();
         this.init();
+    }
+
+    initVideo() {
+        // 動画の自動再生を確実にする
+        const heroVideo = document.getElementById('hero-video');
+        if (heroVideo) {
+            // ページ読み込み後に動画再生を開始
+            heroVideo.addEventListener('canplay', function() {
+                heroVideo.play().catch(function(error) {
+                    console.log('動画の自動再生に失敗しました:', error);
+                });
+            });
+            
+            // 手動で再生を試行
+            heroVideo.play().catch(function(error) {
+                console.log('動画の再生に失敗しました:', error);
+            });
+            
+            // ユーザーのクリックで再生を再試行
+            document.addEventListener('click', function() {
+                if (heroVideo.paused) {
+                    heroVideo.play().catch(function(error) {
+                        console.log('動画の再生に失敗しました:', error);
+                    });
+                }
+            }, { once: true });
+        }
     }
 
     init() {
