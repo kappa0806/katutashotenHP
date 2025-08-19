@@ -602,6 +602,13 @@ section {
     position: relative;
 }
 
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
 .gallery-image::before {
     content: '📷';
     position: absolute;
@@ -610,6 +617,8 @@ section {
     transform: translate(-50%, -50%);
     font-size: 36px;
     opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .gallery-overlay {
