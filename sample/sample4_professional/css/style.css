@@ -864,6 +864,7 @@ section {
         display: flex;
     }
     
+    /* モバイルナビゲーションは共通CSSで管理するためコメントアウト
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -879,6 +880,7 @@ section {
     .nav-menu.active {
         left: 0;
     }
+    */
     
     .nav-link {
         padding: 20px 0;
