@@ -147,6 +147,37 @@
         color: #007bff !important;
         background: rgba(0, 123, 255, 0.1) !important;
     }
+    
+    /* メニュー閉じるボタン */
+    .menu-close-button {
+        position: absolute !important;
+        top: 20px !important;
+        right: 20px !important;
+        background: none !important;
+        border: none !important;
+        font-size: 30px !important;
+        color: currentColor !important;
+        cursor: pointer !important;
+        width: 40px !important;
+        height: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        z-index: 10000 !important;
+        opacity: 0.7 !important;
+        transition: opacity 0.3s ease !important;
+        border-radius: 50% !important;
+    }
+    
+    .menu-close-button:hover {
+        opacity: 1 !important;
+        background: rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .menu-close-button:focus {
+        outline: 2px solid #007bff !important;
+        outline-offset: 2px !important;
+    }
 }
 
 /* お知らせセクション */

@@ -206,6 +206,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     if (hamburger && navMenu) {
+        // 閉じるボタンを作成
+        const closeButton = document.createElement('button');
+        closeButton.className = 'menu-close-button';
+        closeButton.innerHTML = '×';
+        closeButton.setAttribute('aria-label', 'メニューを閉じる');
+        closeButton.style.cssText = `
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: currentColor;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        `;
+        
+        // ホバー効果
+        closeButton.addEventListener('mouseenter', function() {
+            this.style.opacity = '1';
+        });
+        closeButton.addEventListener('mouseleave', function() {
+            this.style.opacity = '0.7';
+        });
+        
         // 強制的にモバイルスタイルを適用（サンプル4,5対応）
         function applyMobileStyles() {
             if (window.innerWidth <= 768) {
@@ -230,6 +262,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 navMenu.style.setProperty('transition', 'right 0.3s ease', 'important');
                 navMenu.style.setProperty('box-shadow', '-5px 0 15px rgba(0, 0, 0, 0.1)', 'important');
                 
+                // 閉じるボタンをメニューに追加（まだ追加されていない場合）
+                if (!navMenu.querySelector('.menu-close-button')) {
+                    navMenu.appendChild(closeButton);
+                }
+                
+                // 閉じるボタンの色を調整
+                closeButton.style.color = textColor;
+                
                 // リンクの色も調整
                 const links = navMenu.querySelectorAll('a');
                 links.forEach(link => {
@@ -239,7 +279,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('モバイルスタイル適用完了:', {
                     isDarkTheme: isDarkTheme,
                     backgroundColor: backgroundColor,
-                    linksCount: links.length
+                    linksCount: links.length,
+                    closeButtonAdded: !!navMenu.querySelector('.menu-close-button')
                 });
             }
         }
@@ -314,6 +355,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 computedRight: window.getComputedStyle(navMenu).right,
                 computedDisplay: window.getComputedStyle(navMenu).display
             });
+        });
+        
+        // 閉じるボタンクリック時にメニューを閉じる
+        closeButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('閉じるボタンクリック - メニューを閉じる');
+            isMenuOpen = false;
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            navMenu.style.setProperty('right', '-100%', 'important');
+            navMenu.style.setProperty('left', 'auto', 'important');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
         });
         
         // メニューリンククリック時にメニューを閉じる
