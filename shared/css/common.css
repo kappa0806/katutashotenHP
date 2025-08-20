@@ -180,6 +180,40 @@
     }
 }
 
+/* ロゴクリック機能 */
+.nav-logo,
+.logo,
+.header-logo,
+.footer-logo {
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-logo:hover,
+.logo:hover,
+.header-logo:hover,
+.footer-logo:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+.nav-logo:active,
+.logo:active,
+.header-logo:active,
+.footer-logo:active {
+    transform: scale(0.95);
+}
+
+/* ロゴのフォーカス表示 */
+.nav-logo:focus,
+.logo:focus,
+.header-logo:focus,
+.footer-logo:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 3px;
+    border-radius: 5px;
+}
+
 /* お知らせセクション */
 .news-section {
     padding: 80px 0;

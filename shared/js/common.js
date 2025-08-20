@@ -402,6 +402,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // ロゴクリックでトップに戻る機能
+    const logos = document.querySelectorAll('.nav-logo, .logo, .header-logo, .footer-logo');
+    logos.forEach(function(logo) {
+        // ロゴがリンクでない場合はクリック可能にする
+        logo.style.cursor = 'pointer';
+        
+        logo.addEventListener('click', function(e) {
+            // ロゴがリンク（<a>タグ）でない場合のみ処理
+            if (e.target.tagName !== 'A' && !e.target.closest('a')) {
+                e.preventDefault();
+                console.log('ロゴクリック - トップへスクロール');
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        });
+        
+        // アクセシビリティ向上
+        if (logo.tagName !== 'A' && !logo.closest('a')) {
+            logo.setAttribute('role', 'button');
+            logo.setAttribute('aria-label', 'ページトップへ戻る');
+            logo.setAttribute('tabindex', '0');
+            
+            // キーボード操作対応
+            logo.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    console.log('ロゴキーボード操作 - トップへスクロール');
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        }
+    });
+    
     // 画像の遅延読み込み
     const lazyImages = document.querySelectorAll('img[data-src]');
     if ('IntersectionObserver' in window) {
