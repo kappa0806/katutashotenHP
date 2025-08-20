@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>勝田商店 - 新鮮な魚をお届け</title>
+    
+    <!-- SEO最適化メタタグ -->
+    <meta name="description" content="勝田商店は創業2011年、毎朝15kmの市場を歩いて厳選した新鮮な魚介類をお届けする魚屋です。プロの料理人から一般のお客様まで、真心込めてご対応いたします。">
+    <meta name="keywords" content="勝田商店,魚屋,鮮魚,刺身,魚介類,海鮮,新鮮,市場,配達">
+    <meta name="author" content="勝田商店">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="勝田商店 - 新鮮な魚介類をお届け">
+    <meta property="og:description" content="毎朝15kmの市場を歩いて厳選した新鮮な魚介類をお届けします">
+    <meta property="og:image" content="../../shared/images/shop.jpg">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../shared/css/common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -198,6 +211,32 @@
         </div>
     </section>
 
+    <!-- お知らせセクション -->
+    <section class="news-section" id="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">お知らせ</h2>
+                <p class="section-subtitle">新着情報・入荷情報</p>
+            </div>
+            
+            <div class="news-container">
+                <article class="news-item">
+                    <time class="news-date" datetime="2024-01-15">2024年1月15日</time>
+                    <span class="news-category category-info">入荷情報</span>
+                    <h3 class="news-title">本マグロ特別入荷のお知らせ</h3>
+                    <p class="news-content">青森県大間産の本マグロが入荷しました。数量限定となりますので、お早めにご来店ください。</p>
+                </article>
+                
+                <article class="news-item">
+                    <time class="news-date" datetime="2024-01-10">2024年1月10日</time>
+                    <span class="news-category category-notice">お知らせ</span>
+                    <h3 class="news-title">年末年始の営業時間について</h3>
+                    <p class="news-content">12月31日は15:00まで、1月1日〜3日は休業、1月4日より通常営業いたします。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- コンタクト・アクセス -->
     <section class="contact" id="contact">
         <div class="container">
@@ -222,7 +261,7 @@
                         
                         <div class="contact-item">
                             <h4>お問い合わせ</h4>
-                            <p>TEL: 03-1234-5678<br>
+                            <p>TEL: <a href="tel:03-1234-5678" aria-label="電話をかける">03-1234-5678</a><br>
                             EMAIL: info@katsuta-shoten.jp</p>
                         </div>
                         
@@ -261,5 +300,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="../../shared/js/common.js"></script>
 </body>
 </html>
