@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         elementsWithLang.forEach(element => {
             const langText = element.getAttribute(`data-${lang}`);
             if (langText) {
-                element.textContent = langText;
+                element.innerHTML = langText;
             }
         });
         
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
         newElements.forEach(element => {
             const langText = element.getAttribute(`data-${currentLang}`);
             if (langText) {
-                element.textContent = langText;
+                element.innerHTML = langText;
                 element.setAttribute('data-lang-updated', 'true');
             }
         });

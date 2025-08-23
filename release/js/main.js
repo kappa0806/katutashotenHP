@@ -38,6 +38,7 @@ class ProfessionalSite {
         this.setupTestimonialSlider();
         this.setupScrollEffects();
         this.setupVideoFallback();
+        this.updateCopyright();
     }
 
     // ナビゲーション設定
@@ -208,6 +209,15 @@ class ProfessionalSite {
                     `;
                 }
             }, 3000);
+        }
+    }
+
+    // コピーライト年数自動更新
+    updateCopyright() {
+        const currentYearElement = document.getElementById('currentYear');
+        if (currentYearElement) {
+            const currentYear = new Date().getFullYear();
+            currentYearElement.textContent = currentYear;
         }
     }
 }

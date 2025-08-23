@@ -261,22 +261,22 @@
                     
                     <div class="contact-details">
                         <div class="contact-item">
-                            <h4>勝田商店</h4>
-                            <p>中野ブロードウェイ店</p>
+                            <h4 data-ja="勝田商店" data-en="Katsuta Store" data-zh="胜田商店">勝田商店</h4>
+                            <p data-ja="中野ブロードウェイ店" data-en="Nakano Broadway Store" data-zh="中野百老汇店">中野ブロードウェイ店</p>
                         </div>
                         
                         <div class="contact-item">
-                            <h4>住所</h4>
-                            <p>東京都中野区中野5-52-15<br>中野ブロードウェイ B1F</p>
+                            <h4 data-ja="住所" data-en="Address" data-zh="地址">住所</h4>
+                            <p data-ja="東京都中野区中野5-52-15<br>中野ブロードウェイ B1F" data-en="5-52-15 Nakano, Nakano City<br>Tokyo, Nakano Broadway B1F" data-zh="东京都中野区中野5-52-15<br>中野百老汇 B1F">東京都中野区中野5-52-15<br>中野ブロードウェイ B1F</p>
                         </div>
                         
                         <div class="contact-item">
-                            <h4>営業時間</h4>
-                            <p>朝 10:30 〜 夕方 7:30<br>定休日：水曜日、日曜日、祝日</p>
+                            <h4 data-ja="営業時間" data-en="Business Hours" data-zh="营业时间">営業時間</h4>
+                            <p data-ja="朝 10:30 〜 夕方 7:30（なくなり次第閉店のため早めに閉店する場合もあります）<br>定休日：水曜日、日曜日、祝日" data-en="10:30 AM - 7:30 PM (May close early when sold out)<br>Closed: Wednesday, Sunday, National Holidays" data-zh="上午10:30 - 晚上7:30（售完即止，可能会提早关店）<br>休息日：周三、周日、法定假日">朝 10:30 〜 夕方 7:30（なくなり次第閉店のため早めに閉店する場合もあります）<br>定休日：水曜日、日曜日、祝日</p>
                         </div>
                         
                         <div class="contact-item">
-                            <h4>お問い合わせ</h4>
+                            <h4 data-ja="お問い合わせ" data-en="Contact" data-zh="联系方式">お問い合わせ</h4>
                             <p>TEL: <a aria-label="電話をかける">080-1146-2779</a>
                         </div>
                         
@@ -302,6 +302,13 @@
         </div>
     </section>
 
+    <!-- 自動翻訳注意書き -->
+    <div class="translation-notice">
+        <div class="container">
+            <p class="notice-text" data-ja="※ 英語・中国語は自動翻訳を使用しております。正確な情報については日本語をご参照ください。" data-en="* English and Chinese translations are automated. Please refer to Japanese for accurate information." data-zh="* 英语和中文翻译为自动翻译。准确信息请参考日语。">※ 英語・中国語は自動翻訳を使用しております。正確な情報については日本語をご参照ください。</p>
+        </div>
+    </div>
+
     <!-- フッター -->
     <footer class="footer">
         <div class="container">
@@ -311,7 +318,7 @@
                     <span class="logo-sub">プロフェッショナル</span>
                 </div>
                 <div class="footer-text">
-                    <p>&copy; 2024 勝田商店. プロフェッショナル水産業者.</p>
+                    <p>&copy; <span id="currentYear">2024</span> 勝田商店. プロフェッショナル水産業者.</p>
                 </div>
             </div>
         </div>
