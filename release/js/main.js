@@ -57,8 +57,14 @@ class ProfessionalSite {
         // スムーススクロール
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
-                e.preventDefault();
                 const targetId = link.getAttribute('href');
+                
+                // 外部リンクの場合はスクロール処理をスキップ
+                if (targetId.startsWith('http') || targetId.startsWith('//')) {
+                    return;
+                }
+                
+                e.preventDefault();
                 const targetSection = document.querySelector(targetId);
                 
                 if (targetSection) {
