@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 :root {
     --primary-black: #0d0d0d;
     --secondary-black: #1a1a1a;
@@ -22,6 +27,8 @@ body {
     color: var(--text-white);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
     /* 日本語禁則処理 */
     word-break: auto;
     line-break: strict;
@@ -347,16 +354,24 @@ section {
 
 .section-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 30px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     text-transform: uppercase;
     color: #fff;
     /* 見出しの改行制御 */
     word-break: keep-all;
-    white-space: nowrap;
-    overflow-wrap: normal;
+}
+
+/* 英語表示時の見出しスタイル調整 */
+[data-lang="en"] .section-title,
+[data-lang="zh"] .section-title {
+    word-break: normal;
+    hyphens: auto;
+    font-size: clamp(1.8rem, 4vw, 3rem);
 }
 
 .section-subtitle {
@@ -365,6 +380,26 @@ section {
     line-height: 1.8;
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* 中野の魚屋セクション */
+.nakano-section {
+    background-color: var(--primary-black);
+    padding: 100px 0;
+}
+
+.nakano-content {
+    margin-top: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nakano-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Aboutセクション */
@@ -389,6 +424,9 @@ section {
     color: var(--accent-gold);
     margin-bottom: 30px;
     font-weight: 500;
+    /* 適切な改行位置を設定 */
+    word-break: auto;
+    line-break: normal;
 }
 
 .about-text p {
@@ -621,9 +659,9 @@ section {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-auto-rows: 250px;
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 280px;
+    gap: 20px;
     margin-bottom: 60px;
 }
 
@@ -664,26 +702,14 @@ section {
     transition: transform 0.3s ease;
 }
 
-.gallery-image::before {
-    content: '📷';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 36px;
-    opacity: 0.3;
-    z-index: 1;
-    pointer-events: none;
-}
-
 .gallery-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
     color: var(--text-white);
-    padding: 30px 20px 20px;
+    padding: 40px 20px 20px;
     transform: translateY(100%);
     transition: transform 0.3s ease;
 }
@@ -693,9 +719,10 @@ section {
 }
 
 .gallery-overlay h4 {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
     margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .gallery-overlay p {
@@ -836,6 +863,31 @@ section {
     border-radius: 10px;
 }
 
+/* 東京中野に魚のある食生活セクション */
+.fish-life-section {
+    background-color: var(--primary-black);
+    padding: 100px 0;
+}
+
+.fish-life-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.fish-life-text {
+    font-size: 18px;
+    line-height: 1.9;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.fish-life-text:first-child {
+    color: var(--accent-gold);
+    font-size: 20px;
+    font-weight: 500;
+}
+
 /* 自動翻訳注意書き */
 .translation-notice {
     background-color: rgba(218, 165, 32, 0.1);
@@ -968,6 +1020,30 @@ section {
         padding: 0 20px;
     }
     
+    .nakano-section {
+        padding: 60px 0;
+    }
+    
+    .nakano-content {
+        padding: 0 20px;
+    }
+    
+    .fish-life-section {
+        padding: 60px 0;
+    }
+    
+    .fish-life-content {
+        padding: 0 20px;
+    }
+    
+    .fish-life-text {
+        font-size: 16px;
+    }
+    
+    .fish-life-text:first-child {
+        font-size: 18px;
+    }
+    
     .hero__media {
         top: 60px;
         height: calc(100% - 120px);
@@ -1009,6 +1085,18 @@ section {
     .stats-row {
         flex-direction: column;
         gap: 20px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 220px;
+        gap: 15px;
+    }
+    
+    .gallery-item.wide,
+    .gallery-item.tall,
+    .gallery-item.large {
+        grid-column: span 2;
     }
     
     .gallery-filters {
